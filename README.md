@@ -1,48 +1,35 @@
 # Digital Signal Processing 
 
-This project includes exercises and signal analysis tasks performed as part of the homework assignment in the Digital Signal Processing (DSP) course.
-
 ## Objectives
 
-- Understand and visualize the behavior of sinusoidal signals.
-- Analyze frequency components using the Fourier Transform (FFT).
-- Apply filtering techniques in both time and frequency domains.
-- Practice signal windowing and zero-padding.
+This project was submitted as part of a homework assignment in the Digital Signal Processing (DSP) course. It explores key concepts in time and frequency domain analysis using Python and includes audio signal processing on a real WAV file.
 
 ## Content Overview
 
 The notebook covers:
 
-### 1. Signal Creation and Visualization
-- Generation of periodic signals: `sin(2πft)`, `cos(2πft)`.
-- Exploration of time resolution (`dt`) and its impact on signal representation.
+### Part 1: Synthetic Signal Analysis
+- Generation of sine and cosine waves with varying frequency, phase, and amplitude
+- Summation of multiple harmonics
+- Creation of a pulse train with a specific period and width
+- FFT-based frequency analysis and use of `fftshift()`
+- Effects of aliasing and time resolution
 
-### 2. Frequency Analysis (FFT)
-- Application of Fast Fourier Transform to:
-  - Pure sinusoidal signals.
-  - Sum of signals with different frequencies.
-- Observation of spectral leakage and the effect of signal length.
-
-### 3. Filtering and Windowing
-- Design of band-pass filters.
-- Application of Hamming and rectangular windows.
-- Comparison between filtered and unfiltered spectra.
-
-### 4. Zero-Padding
-- Exploration of zero-padding effects on frequency resolution.
-- Demonstration of FFT interpolation.
+### Part 2: Real Signal – WAV File Analysis
+- Loading and analyzing `harpsi-cs.wav` using `scipy.io.wavfile`
+- Time-domain and frequency-domain visualization of the audio signal
+- Observing harmonics and spectral content in a real-world waveform
 
 ## Files
 
 - `digital_signal_processing_exercise.ipynb`: Colab Notebook containing all analysis and plots.
+- `harpsi-cs.wav` – Audio file used for analysis in the frequency domain
 
-## Requirements
+## Libraries Used
 
-- Python 3.7+
-- NumPy
-- Matplotlib
-- SciPy (optional, if used)
-
+- numpy
+- matplotlib
+- scipy.io.wavfile
 Install dependencies via:
 
 ```bash
